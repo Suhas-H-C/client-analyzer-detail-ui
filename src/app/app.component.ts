@@ -8,7 +8,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 export class AppComponent implements OnInit{
   ngOnInit(): void {
   }
-  title = 'basic-app';
+  title = 'angular-console';
   
   listOfAnims:Array<string>=['cat','dog','donkey','tiger','lion'];
   yourReferenceTitle:string="feature"
