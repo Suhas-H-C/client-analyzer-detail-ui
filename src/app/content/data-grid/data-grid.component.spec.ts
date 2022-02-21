@@ -35,4 +35,9 @@ describe('DataGridComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should check component title',()=>{
+    const createDummyComponent = TestBed.createComponent(DataGridComponent);
+    const componentDuplicated = createDummyComponent.componentInstance;
+    expect(componentDuplicated.title).toEqual('data-grid')
+  })
 });

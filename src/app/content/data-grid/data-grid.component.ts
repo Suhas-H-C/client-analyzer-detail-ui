@@ -10,6 +10,8 @@ import { SampleFormComponent } from '../sample-form/sample-form.component';
 })
 export class DataGridComponent implements OnInit {
 
+  title:string='data-grid'
+
   showGrid:boolean=false;
   rowDataUser: Array<any> = []
   rowDataDump: Array<any> = []
