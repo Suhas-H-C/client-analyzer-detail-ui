@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartGridComponent implements OnInit {
 
-  options:any
-  
+  options: any
+
   constructor() { }
 
   ngOnInit(): void {

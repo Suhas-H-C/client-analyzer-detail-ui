@@ -24,7 +24,7 @@ export class FeatureDevelopComponent implements OnInit {
   title: string = 'feature/develop'
   currentUrl: string = window.location.href;
 
-  myName:string="Suhas"
+  myName: string = "Suhas"
   /**
   * property binding for [class] attribute of input tag
   * data-flow from class(.ts) to Template(UI)
@@ -50,16 +50,16 @@ export class FeatureDevelopComponent implements OnInit {
   childEmitter = new EventEmitter();
 
   @Output('simpleMessage')
-  messenger= new EventEmitter();
+  messenger = new EventEmitter();
 
-  someText:string='this is child component'
-  someObject:object={
-    "firstName":"John",
-    "lastName":"Doe"
+  someText: string = 'this is child component'
+  someObject: object = {
+    "firstName": "John",
+    "lastName": "Doe"
   }
-  employee={
-    id:'12',
-    name:'A'
+  employee = {
+    id: '12',
+    name: 'A'
   }
   /**
    * constructor of the class that loads at start
@@ -99,8 +99,8 @@ export class FeatureDevelopComponent implements OnInit {
     this.childEmitter.emit("Cliked from root component");
   }
 
-  routeOnButtonClick(){
+  routeOnButtonClick() {
     this.messenger.emit(this.employee)
-    this.router.navigate(['/develop-ftt',this.employee.id])
+    this.router.navigate(['/develop-ftt', this.employee.id])
   }
 }

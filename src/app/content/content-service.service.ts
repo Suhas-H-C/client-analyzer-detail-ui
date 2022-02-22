@@ -8,20 +8,20 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ContentServiceService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  getUserRecords():Observable<any>{
+  getUserRecords(): Observable<any> {
     return this.httpClient.get("https://jsonplaceholder.typicode.com/users")
   }
-  getEmployeeRecords():Observable<any>{
+  getEmployeeRecords(): Observable<any> {
     return this.httpClient.get("http://localhost:8080/csv/read/dependency")
-    .pipe(
-      retry(0), // Retries once
-      catchError(this.errorHandler)
-    );
+      .pipe(
+        retry(0), // Retries once
+        catchError(this.errorHandler) //catches error in custom method
+      );
   }
 
-  private errorHandler(error: { message: any; }){
-    return throwError(()=>error.message);
+  private errorHandler(error: { message: any; }) {
+    return throwError(() => error.message);
   }
 }

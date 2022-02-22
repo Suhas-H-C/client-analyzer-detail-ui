@@ -6,7 +6,7 @@ import { FeatureDevelopComponent } from './content/feature-develop/feature-devel
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class AppComponent implements OnInit, AfterViewInit {
 
   /**
    * To change something in child component accessed we implement AfterViewInit interface
@@ -20,14 +20,14 @@ export class AppComponent implements OnInit, AfterViewInit{
     console.log(this.receiveMessage)
   }
   title = 'angular-console';
-  receiveMessage:Object={};
+  receiveMessage: Object = {};
   /**
    * Accesing child component
    */
-  @ViewChild(FeatureDevelopComponent) featureDevelopComponent!:FeatureDevelopComponent;
+  @ViewChild(FeatureDevelopComponent) featureDevelopComponent!: FeatureDevelopComponent;
 
-  listOfAnims:Array<string>=['cat','dog','donkey','tiger','lion'];
-  yourReferenceTitle:string="feature"
- 
+  listOfAnims: Array<string> = ['cat', 'dog', 'donkey', 'tiger', 'lion'];
+  yourReferenceTitle: string = "feature"
+
 
 }

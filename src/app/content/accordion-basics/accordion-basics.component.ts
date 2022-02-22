@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccordionBasicsComponent implements OnInit {
 
-  accordionTitle:string="sample-accordion"
-  accordionDescription:string="contains sample lorem paragraph"
-  
+  accordionTitle: string = "sample-accordion"
+  accordionDescription: string = "contains sample lorem paragraph"
+
   constructor() { }
 
   ngOnInit(): void {

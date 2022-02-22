@@ -18,13 +18,13 @@ const routes: Routes = [
   /**
    * Other routes
    */
-  { path: 'sample', component: SampleFormComponent},
-  { path: 'chart', component: ChartGridComponent},
-  { path: 'develop-ftt/:id', component: FooterComponent},
+  { path: 'sample', component: SampleFormComponent },
+  { path: 'chart', component: ChartGridComponent },
+  { path: 'develop-ftt/:id', component: FooterComponent },
   /**
    * Not found handler (Always at the bottom)
    */
-  { path: '**', component: PageNotFoundComponent}
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

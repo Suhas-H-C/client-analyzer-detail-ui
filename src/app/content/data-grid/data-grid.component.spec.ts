@@ -58,9 +58,9 @@ describe('DataGridComponent', () => {
     )
   })
 
-  it('should check userData calling time',()=>{
+  it('should check userData calling time', () => {
     expect(component.contentService.getUserRecords().subscribe(
-      (response)=>{
+      (response) => {
         expect(response).toHaveBeenCalledTimes(1);
       }
     ))

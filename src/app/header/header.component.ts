@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     { field: 'company.catchPhrase', sortable: false, resizable: true },
     { field: 'company.bs', sortable: false },
   ];
-  
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,9 +8,9 @@ describe('ChartGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChartGridComponent ]
+      declarations: [ChartGridComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
