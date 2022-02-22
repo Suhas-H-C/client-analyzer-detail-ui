@@ -17,9 +17,10 @@ export class AppComponent implements OnInit, AfterViewInit{
     console.log(this.featureDevelopComponent.myName)
   }
   ngOnInit(): void {
+    console.log(this.receiveMessage)
   }
   title = 'angular-console';
-  
+  receiveMessage:Object={};
   /**
    * Accesing child component
    */
@@ -27,4 +28,6 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   listOfAnims:Array<string>=['cat','dog','donkey','tiger','lion'];
   yourReferenceTitle:string="feature"
+ 
+
 }

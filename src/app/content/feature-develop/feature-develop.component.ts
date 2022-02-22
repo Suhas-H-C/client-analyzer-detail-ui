@@ -49,6 +49,8 @@ export class FeatureDevelopComponent implements OnInit {
   @Output('messageEmitted')
   childEmitter = new EventEmitter();
 
+  @Output('simpleMessage')
+  messenger= new EventEmitter();
 
   someText:string='this is child component'
   someObject:object={
@@ -98,6 +100,7 @@ export class FeatureDevelopComponent implements OnInit {
   }
 
   routeOnButtonClick(){
+    this.messenger.emit(this.employee)
     this.router.navigate(['/develop-ftt',this.employee.id])
   }
 }
