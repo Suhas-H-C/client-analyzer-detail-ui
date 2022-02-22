@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   /**
@@ -53,10 +54,14 @@ export class FeatureDevelopComponent implements OnInit {
     "firstName":"John",
     "lastName":"Doe"
   }
+  employee={
+    id:'12',
+    name:'A'
+  }
   /**
    * constructor of the class that loads at start
    */
-  constructor() { }
+  constructor(public router: Router) { }
 
   /**
    * inherited method that loads at start
@@ -89,5 +94,9 @@ export class FeatureDevelopComponent implements OnInit {
     console.log(event)
     console.log(event.type)
     this.childEmitter.emit("Cliked from root component");
+  }
+
+  routeOnButtonClick(){
+    this.router.navigate(['/develop-ftt',this.employee.id])
   }
 }

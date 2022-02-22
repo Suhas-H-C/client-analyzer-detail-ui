@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChartGridComponent } from './content/chart-grid/chart-grid.component';
 import { PageNotFoundComponent } from './content/page-not-found/page-not-found.component';
 import { SampleFormComponent } from './content/sample-form/sample-form.component';
+import { FooterComponent } from './footer/footer.component';
 
 /**
  * Contains all routes 
@@ -13,12 +14,13 @@ const routes: Routes = [
   /**
    * To display some route by default
    */
-  { path: '', component: ChartGridComponent},
+  //{ path: '', component: AppComponent},
   /**
    * Other routes
    */
   { path: 'sample', component: SampleFormComponent},
   { path: 'chart', component: ChartGridComponent},
+  { path: 'develop-ftt/:id', component: FooterComponent},
   /**
    * Not found handler (Always at the bottom)
    */

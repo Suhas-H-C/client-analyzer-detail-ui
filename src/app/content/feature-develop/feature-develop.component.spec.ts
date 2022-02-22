@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router, RouterModule } from '@angular/router';
+import { EventEmitter } from '@angular/core';
 
 import { FeatureDevelopComponent } from './feature-develop.component';
 
@@ -8,7 +10,10 @@ describe('FeatureDevelopComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeatureDevelopComponent ]
+      declarations: [ FeatureDevelopComponent ],
+      imports: [
+        RouterModule.forRoot([])
+      ]
     })
     .compileComponents();
   });
@@ -19,7 +24,11 @@ describe('FeatureDevelopComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create',()=>{
     expect(component).toBeTruthy();
+  })
+
+  it('should have url', () => {
+    expect(component.currentUrl).toBe(window.location.href);
   });
 });
