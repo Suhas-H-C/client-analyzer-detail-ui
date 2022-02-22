@@ -24,6 +24,7 @@ export class FeatureDevelopComponent implements OnInit {
   title: string = 'feature/develop'
   currentUrl: string = window.location.href;
 
+  myName:string="Suhas"
   /**
   * property binding for [class] attribute of input tag
   * data-flow from class(.ts) to Template(UI)

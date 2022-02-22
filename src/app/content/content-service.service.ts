@@ -16,7 +16,7 @@ export class ContentServiceService {
   getEmployeeRecords():Observable<any>{
     return this.httpClient.get("http://localhost:8080/csv/read/dependency")
     .pipe(
-      retry(3), // Retries once
+      retry(0), // Retries once
       catchError(this.errorHandler)
     );
   }

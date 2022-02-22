@@ -5,6 +5,7 @@
             }}</button>
     </div>
     <p [ngClass]="combinedClasses">{{ currentUrl.toLowerCase() }}</p>
+    <p>{{ myName }}</p>
     <p [class]="textSuccess">{{ title.toUpperCase() + title.length}}</p>
     <!-- using ngModel to 2 way binding []->from class to UI ()->from UI to class -->
     <input [class.text-danger]="true" [(ngModel)]="propertyBindingString" type="text"
