@@ -61,13 +61,14 @@ export class DataGridComponent implements OnInit {
     }
   ];
 
-  constructor(private contentService: ContentServiceService,private matDialogOpener:MatDialog) {
+  constructor(public contentService: ContentServiceService,private matDialogOpener:MatDialog) {
     /**
      * Dependenc injection from service class
      */
     this.contentService.getUserRecords().subscribe(
       (response) => {
         this.rowDataUser = response;
+        console.log(this.rowDataUser.length)
       },
       (errors) => {
         console.log(errors)

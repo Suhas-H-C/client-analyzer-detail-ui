@@ -1,14 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { AgGridModule } from 'ag-grid-angular';
-
 import { DataGridComponent } from './data-grid.component';
+
 
 describe('DataGridComponent', () => {
   let component: DataGridComponent;
@@ -35,9 +30,39 @@ describe('DataGridComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should check component title',()=>{
-    const createDummyComponent = TestBed.createComponent(DataGridComponent);
-    const componentDuplicated = createDummyComponent.componentInstance;
-    expect(componentDuplicated.title).toEqual('data-grid')
+  it('should check component title', () => {
+    expect(component.title).toEqual('data-grid')
+  })
+
+  it('should check the dumpData size', () => {
+    /**
+     * Using defualt created instance
+     */
+    expect(component.rowDataDump.length).toHaveSize(0);
+  })
+
+  it('should check userData size', () => {
+    /**
+     * To create own instance
+     */
+    const creatingDummyInstance = TestBed.createComponent(DataGridComponent);
+    const creatingOwnInstance = creatingDummyInstance.componentInstance;
+    console.log(creatingOwnInstance.rowDataUser.length)
+    /**
+     * subscribing and checking the response length
+     */
+    creatingOwnInstance.contentService.getUserRecords().subscribe(
+      response => {
+        expect(response.length).toBe(10);
+      }
+    )
+  })
+
+  it('should check userData calling time',()=>{
+    expect(component.contentService.getUserRecords().subscribe(
+      (response)=>{
+        expect(response).toHaveBeenCalledTimes(1);
+      }
+    ))
   })
 });
