@@ -40,7 +40,6 @@ import { Router, RouterModule, Routes } from '@angular/router';
     MatExpansionModule,
     MatTooltipModule,
     RouterModule,
-    Router
   ],
   providers: [],
   bootstrap: [AppComponent]
