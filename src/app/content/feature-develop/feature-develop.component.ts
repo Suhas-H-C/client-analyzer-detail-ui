@@ -75,7 +75,7 @@ export class FeatureDevelopComponent implements OnInit {
    * dataTitle is now the property of tag <app-feature-develop>
    * data-flow from Template(UI) of other component who used it to class(.ts)
    */
- 
+
 
   /**
    * other components using this should provide input with name giveMeTitle and value
@@ -94,7 +94,9 @@ export class FeatureDevelopComponent implements OnInit {
     console.log(event)
     console.log(event.type)
   }
-
+  /**
+   * routing to provided route on button click
+   */
   routeOnButtonClick() {
     this.messenger.emit(this.employee)
     this.router.navigate(['/develop-ftt', this.employee.id])

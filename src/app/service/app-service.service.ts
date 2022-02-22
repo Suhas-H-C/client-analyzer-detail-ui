@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { catchError, Observable, retry, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ContentServiceService {
+export class AppServiceService {
 
   constructor(private httpClient: HttpClient) { }
 

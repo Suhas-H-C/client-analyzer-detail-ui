@@ -11,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AgGridModule } from 'ag-grid-angular';
 import { AccordionBasicsComponent } from './accordion-basics/accordion-basics.component';
 import { ChartGridComponent } from './chart-grid/chart-grid.component';
-import { ContentServiceService } from './content-service.service';
+import { ContentServiceService } from './content-service/content-service.service';
 import { DataGridComponent } from './data-grid/data-grid.component';
 import { FeatureDevelopComponent } from './feature-develop/feature-develop.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';

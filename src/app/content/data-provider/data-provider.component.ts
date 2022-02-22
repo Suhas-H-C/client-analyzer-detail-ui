@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentServiceService } from '../content-service.service';
+import { ContentServiceService } from '../content-service/content-service.service';
 
 @Component({
   selector: 'app-data-provider',
