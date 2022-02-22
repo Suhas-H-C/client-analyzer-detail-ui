@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ContentServiceService } from '../content-service.service';
 import { SampleFormComponent } from '../sample-form/sample-form.component';
 
 @Component({
@@ -25,7 +24,7 @@ export class DataGridComponent implements OnInit {
   @Input('columnEmployee')
   colDefsEmployee!: Array<any>; 
 
-  constructor(public contentService: ContentServiceService, private matDialogOpener: MatDialog) {  }
+  constructor(private matDialogOpener: MatDialog) {  }
 
   ngOnInit(): void {
   }
