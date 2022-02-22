@@ -25,8 +25,6 @@ export class AppComponent implements OnInit, AfterViewInit {
    * Accesing child component
    */
   @ViewChild(FeatureDevelopComponent) featureDevelopComponent!: FeatureDevelopComponent;
-
-  listOfAnims: Array<string> = ['cat', 'dog', 'donkey', 'tiger', 'lion'];
   yourReferenceTitle: string = "feature"
 
 

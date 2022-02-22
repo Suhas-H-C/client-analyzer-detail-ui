@@ -46,8 +46,6 @@ export class FeatureDevelopComponent implements OnInit {
     "text-success": true,
     "text-italic": true
   }
-  @Output('messageEmitted')
-  childEmitter = new EventEmitter();
 
   @Output('simpleMessage')
   messenger = new EventEmitter();
@@ -77,8 +75,7 @@ export class FeatureDevelopComponent implements OnInit {
    * dataTitle is now the property of tag <app-feature-develop>
    * data-flow from Template(UI) of other component who used it to class(.ts)
    */
-  @Input()
-  dataTitle!: Array<string>;
+ 
 
   /**
    * other components using this should provide input with name giveMeTitle and value
@@ -96,7 +93,6 @@ export class FeatureDevelopComponent implements OnInit {
   buttonClicked(event: any) {
     console.log(event)
     console.log(event.type)
-    this.childEmitter.emit("Cliked from root component");
   }
 
   routeOnButtonClick() {

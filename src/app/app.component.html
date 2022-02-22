@@ -1,9 +1,9 @@
 <div class="container-fluid mt-3">
     <p>{{ title }}</p>
-    <app-accordion-basics></app-accordion-basics>
+    <app-accordion-basics (changeTitle)="title = $event"></app-accordion-basics>
     <app-data-provider></app-data-provider>
     <!-- using EventEmiiter in child component to emit the value to parent component -->
-    <app-feature-develop (simpleMessage)="receiveMessage = $event" (messageEmitted)="title = $event" [dataTitle]="listOfAnims" [giveMeTitle]="yourReferenceTitle"></app-feature-develop>
+    <app-feature-develop (simpleMessage)="receiveMessage = $event" [giveMeTitle]="yourReferenceTitle"></app-feature-develop>
 </div>
 
 <div>
