@@ -13,7 +13,6 @@ describe('DataGridComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [DataGridComponent],
       imports: [
-        HttpClientTestingModule,
         MatDialogModule,
         AgGridModule
       ]
@@ -41,28 +40,4 @@ describe('DataGridComponent', () => {
     expect(component.rowDataDump.length).toHaveSize(0);
   })
 
-  it('should check userData size', () => {
-    /**
-     * To create own instance
-     */
-    const creatingDummyInstance = TestBed.createComponent(DataGridComponent);
-    const creatingOwnInstance = creatingDummyInstance.componentInstance;
-    console.log(creatingOwnInstance.rowDataUser.length)
-    /**
-     * subscribing and checking the response length
-     */
-    creatingOwnInstance.contentService.getUserRecords().subscribe(
-      response => {
-        expect(response.length).toBe(10);
-      }
-    )
-  })
-
-  it('should check userData calling time', () => {
-    expect(component.contentService.getUserRecords().subscribe(
-      (response) => {
-        expect(response).toHaveBeenCalledTimes(1);
-      }
-    ))
-  })
 });

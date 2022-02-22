@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataProviderComponent } from './data-provider.component';
@@ -8,7 +9,10 @@ describe('DataProviderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataProviderComponent ]
+      declarations: [ DataProviderComponent ],
+      imports:[
+        HttpClientTestingModule
+      ]
     })
     .compileComponents();
   });
