@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTreeModule } from '@angular/material/tree';
 import { FeatureDevelopComponent } from './feature-develop/feature-develop.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FeatureDevelopComponent } from './feature-develop/feature-develop.compo
     DataGridComponent,
     ChartGridComponent,
     AccordionBasicsComponent,
-    FeatureDevelopComponent
+    FeatureDevelopComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { FeatureDevelopComponent } from './feature-develop/feature-develop.compo
     DataGridComponent,
     ChartGridComponent,
     AccordionBasicsComponent,
-    FeatureDevelopComponent
+    FeatureDevelopComponent,
+    PageNotFoundComponent
   ],
   providers: [
     ContentServiceService
