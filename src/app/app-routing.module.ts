@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChartGridComponent } from './content/chart-grid/chart-grid.component';
+import { AccordionBasicsComponent } from './content/accordion-basics/accordion-basics.component';
 import { PageNotFoundComponent } from './content/page-not-found/page-not-found.component';
 import { SampleFormComponent } from './content/sample-form/sample-form.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,7 +19,7 @@ const routes: Routes = [
    * Other routes
    */
   { path: 'sample', component: SampleFormComponent },
-  { path: 'chart', component: ChartGridComponent },
+  { path: 'accordion', component: AccordionBasicsComponent },
   { path: 'develop-ftt/:id', component: FooterComponent },
   /**
    * Not found handler (Always at the bottom)

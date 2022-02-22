@@ -8,22 +8,20 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
 import { AccordionBasicsComponent } from './accordion-basics/accordion-basics.component';
-import { ChartGridComponent } from './chart-grid/chart-grid.component';
 import { ContentServiceService } from './content-service/content-service.service';
 import { DataGridComponent } from './data-grid/data-grid.component';
+import { DataProviderComponent } from './data-provider/data-provider.component';
 import { FeatureDevelopComponent } from './feature-develop/feature-develop.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SampleFormComponent } from './sample-form/sample-form.component';
-import { RouterModule, Routes } from '@angular/router';
-import { DataProviderComponent } from './data-provider/data-provider.component';
 
 @NgModule({
   declarations: [
     SampleFormComponent,
     DataGridComponent,
-    ChartGridComponent,
     AccordionBasicsComponent,
     FeatureDevelopComponent,
     PageNotFoundComponent,
@@ -46,7 +44,6 @@ import { DataProviderComponent } from './data-provider/data-provider.component';
   exports: [
     SampleFormComponent,
     DataGridComponent,
-    ChartGridComponent,
     AccordionBasicsComponent,
     FeatureDevelopComponent,
     PageNotFoundComponent,
