@@ -17,6 +17,7 @@ import { FeatureDevelopComponent } from './feature-develop/feature-develop.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SampleFormComponent } from './sample-form/sample-form.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DataProviderComponent } from './data-provider/data-provider.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RouterModule, Routes } from '@angular/router';
     ChartGridComponent,
     AccordionBasicsComponent,
     FeatureDevelopComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DataProviderComponent
   ],
   imports: [
     CommonModule,
@@ -48,6 +50,7 @@ import { RouterModule, Routes } from '@angular/router';
     AccordionBasicsComponent,
     FeatureDevelopComponent,
     PageNotFoundComponent,
+    DataProviderComponent
   ],
   providers: [
     ContentServiceService
