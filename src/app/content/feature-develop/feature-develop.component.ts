@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import * as XLSX from 'xlsx';
+import { ngxCsv } from 'ngx-csv/ngx-csv';
 
 @Component({
   /**
@@ -104,7 +105,7 @@ export class FeatureDevelopComponent implements OnInit {
     this.router.navigate(['/develop-ftt', this.employee.id])
   }
 
-  onFileChange(event: any) {
+  onExcelFileChange(event: any) {
     const target: DataTransfer = <DataTransfer>(event.target);
     const reader: FileReader = new FileReader();
 
@@ -139,5 +140,22 @@ export class FeatureDevelopComponent implements OnInit {
 
     }
     reader.readAsBinaryString(target.files[0]);
+  }
+
+  downloadCsvFromJson(event : any){
+    var options = { 
+      fieldSeparator: ',',
+      quoteStrings: '"',
+      decimalseparator: '.',
+      showLabels: false, 
+      showTitle: false,
+     // title: 'Your title',
+      useBom: true,
+      noDownload: false,
+     // headers: ['poc_id', 'poc_ssn_code', 'poc_location', 'poc_long', 'poc_name', 'poc_ip_address','poc_type']
+    };
+    const NgxCsv:ngxCsv =  new ngxCsv(this.data,"test",options)
+    const someString:string =  NgxCsv.getCsv();
+    console.log(someString)
   }
 }
