@@ -111,16 +111,28 @@ export class FeatureDevelopComponent implements OnInit {
     reader.onload = (e: any) => {
       const dataRead: string = e.target.result;
 
+      /**
+       * Gives binary data
+       */
       //console.log(dataRead);
 
       const wb: XLSX.WorkBook = XLSX.read(dataRead, { type: 'binary' });
 
+      /**
+       * 0 indicates the sheet to be considered
+       */
       const wsName: string = wb.SheetNames[0];
 
       const ws: XLSX.WorkSheet = wb.Sheets[wsName];
 
+      /**
+       * Gives data in text format vertically
+       */
       //console.log(ws)
 
+      /**
+       * Converts data to json and favourable format
+       */
       this.data = XLSX.utils.sheet_to_json(ws, { header: 1 });
 
       console.log(this.data);
