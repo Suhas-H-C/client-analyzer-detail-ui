@@ -19,6 +19,18 @@ export class AppServiceService {
         catchError(this.errorHandler) //catches error in custom method
       );
   }
+  parseCsvSend(file:File):Observable<any>{
+    const formData:FormData = new FormData();
+    formData.append("file",file,file.name);
+    return this.httpClient.post("http://localhost:8080/api/v1/csv/upload",formData)
+    .pipe(
+      retry(0),
+      catchError(this.handleFileParseError)
+    );
+  }
+  private handleFileParseError(error: any){
+    return throwError(()=>error.message);
+  }
 
   private errorHandler(error: { message: any; }) {
     return throwError(() => error.message);

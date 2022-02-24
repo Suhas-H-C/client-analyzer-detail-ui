@@ -15,5 +15,7 @@ export class ContentServiceService {
   getEmployeeRecords(): Observable<any> {
     return this.appService.getEmployeeRecords();
   }
-
+  parseCsvSend(file:File):Observable<any>{
+    return this.appService.parseCsvSend(file);
+  }
 }

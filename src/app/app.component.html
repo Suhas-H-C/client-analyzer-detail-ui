@@ -1,5 +1,6 @@
 <div class="container-fluid mt-3">
     <p>{{ title }} {{ receiveMessage | json }}</p>
+    <app-file-parse-upload></app-file-parse-upload>
     <app-accordion-basics (changeTitle)="title = $event"></app-accordion-basics>
     <app-data-provider></app-data-provider>
     <!-- using EventEmiiter in child component to emit the value to parent component -->

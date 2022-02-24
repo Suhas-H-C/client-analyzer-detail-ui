@@ -17,6 +17,7 @@ import { DataProviderComponent } from './data-provider/data-provider.component';
 import { FeatureDevelopComponent } from './feature-develop/feature-develop.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SampleFormComponent } from './sample-form/sample-form.component';
+import { FileParseUploadComponent } from './file-parse-upload/file-parse-upload.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SampleFormComponent } from './sample-form/sample-form.component';
     AccordionBasicsComponent,
     FeatureDevelopComponent,
     PageNotFoundComponent,
-    DataProviderComponent
+    DataProviderComponent,
+    FileParseUploadComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +49,8 @@ import { SampleFormComponent } from './sample-form/sample-form.component';
     AccordionBasicsComponent,
     FeatureDevelopComponent,
     PageNotFoundComponent,
-    DataProviderComponent
+    DataProviderComponent,
+    FileParseUploadComponent
   ],
   providers: [
     ContentServiceService
