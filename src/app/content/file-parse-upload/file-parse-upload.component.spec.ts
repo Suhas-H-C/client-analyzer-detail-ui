@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ContentServiceService } from '../content-service/content-service.service';
 
 import { FileParseUploadComponent } from './file-parse-upload.component';
 
@@ -8,7 +10,10 @@ describe('FileParseUploadComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FileParseUploadComponent ]
+      declarations: [ FileParseUploadComponent ],
+      imports: [
+        HttpClientTestingModule
+      ]
     })
     .compileComponents();
   });
