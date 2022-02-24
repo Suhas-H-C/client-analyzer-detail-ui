@@ -71,7 +71,7 @@ export class FileParseUploadComponent implements OnInit {
       noDownload: false,
       // headers: ['poc_id', 'poc_ssn_code', 'poc_location', 'poc_long', 'poc_name', 'poc_ip_address','poc_type']
     };
-    const NgxCsv: ngxCsv = new ngxCsv(this.data, "test", options)
+    const NgxCsv: ngxCsv = new ngxCsv(this.data, "poc", options)
     const someString: string = NgxCsv.getCsv();
     console.log(someString)
   }
