@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import * as XLSX from 'xlsx';
 
 @Component({
   /**
@@ -59,6 +60,7 @@ export class FeatureDevelopComponent implements OnInit {
     id: '12',
     name: 'A'
   }
+  data!: [][];
   /**
    * constructor of the class that loads at start
    */
@@ -100,5 +102,30 @@ export class FeatureDevelopComponent implements OnInit {
   routeOnButtonClick() {
     this.messenger.emit(this.employee)
     this.router.navigate(['/develop-ftt', this.employee.id])
+  }
+
+  onFileChange(event: any) {
+    const target: DataTransfer = <DataTransfer>(event.target);
+    const reader: FileReader = new FileReader();
+
+    reader.onload = (e: any) => {
+      const dataRead: string = e.target.result;
+
+      //console.log(dataRead);
+
+      const wb: XLSX.WorkBook = XLSX.read(dataRead, { type: 'binary' });
+
+      const wsName: string = wb.SheetNames[0];
+
+      const ws: XLSX.WorkSheet = wb.Sheets[wsName];
+
+      //console.log(ws)
+
+      this.data = XLSX.utils.sheet_to_json(ws, { header: 1 });
+
+      console.log(this.data);
+
+    }
+    reader.readAsBinaryString(target.files[0]);
   }
 }

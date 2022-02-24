@@ -23,6 +23,7 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@types/xlsx": "^0.0.36",
     "ag-charts-angular": "^5.0.0",
     "ag-charts-community": "^5.0.0",
     "ag-grid-angular": "^27.0.0",
@@ -31,6 +32,7 @@
     "jquery": "^3.6.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "xlsx": "^0.18.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
