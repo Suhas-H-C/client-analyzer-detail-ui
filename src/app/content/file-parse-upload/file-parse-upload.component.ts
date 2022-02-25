@@ -17,7 +17,6 @@ export class FileParseUploadComponent implements OnInit {
   isCsvAttached:boolean = true;
 
   constructor(public contentService:ContentServiceService) { }
-
   ngOnInit(): void {
 
   }
@@ -26,6 +25,7 @@ export class FileParseUploadComponent implements OnInit {
     const target: DataTransfer = <DataTransfer>(event.target);
     const reader: FileReader = new FileReader();
     this.isExcelFileAttached = false;
+
     reader.onload = (e: any) => {
       const dataRead: string = e.target.result;
 
@@ -80,6 +80,7 @@ export class FileParseUploadComponent implements OnInit {
     this.file = event.target.files[0];
     this.isCsvAttached = false;
   }
+
   sendCsvToParse() {
     this.contentService.parseCsvSend(this.file).subscribe(
       (reponse)=>{
