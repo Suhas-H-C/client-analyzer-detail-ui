@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as XLSX from 'xlsx';
 import { ngxCsv } from 'ngx-csv/ngx-csv';
 import { ContentServiceService } from '../content-service/content-service.service';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-file-parse-upload',
@@ -12,11 +13,26 @@ export class FileParseUploadComponent implements OnInit {
 
   data!: [][];
   file!: File;
-
-  isExcelFileAttached:boolean=true;
-  isCsvAttached:boolean = true;
-
-  constructor(public contentService:ContentServiceService) { }
+  sampleJson:any = [
+    {
+      id:12,
+      name:'A'
+    },
+    {
+      id:13,
+      name:'B'
+    },
+    {
+      id:14,
+      name:'C'
+    },
+    {
+      id:14,
+      name:'D'
+    },
+  ]
+  isExcelFileAttached: boolean = true;
+  constructor(public contentService: ContentServiceService) { }
   ngOnInit(): void {
 
   }
@@ -60,7 +76,7 @@ export class FileParseUploadComponent implements OnInit {
   }
 
   downloadCsvFromJson(event: any) {
-    var options = {
+    let options = {
       fieldSeparator: ',',
       quoteStrings: '"',
       decimalseparator: '.',
@@ -71,22 +87,18 @@ export class FileParseUploadComponent implements OnInit {
       noDownload: false,
       // headers: ['poc_id', 'poc_ssn_code', 'poc_location', 'poc_long', 'poc_name', 'poc_ip_address','poc_type']
     };
-    const NgxCsv: ngxCsv = new ngxCsv(this.data, "poc", options)
+    const NgxCsv: ngxCsv = new ngxCsv(this.data, "poc", options) //Can give any JSON data
     const someString: string = NgxCsv.getCsv();
     console.log(someString)
   }
 
-  retreiveCSVFile(event:any){
+  sendCSVFileAndParse(event: any) {
     this.file = event.target.files[0];
-    this.isCsvAttached = false;
-  }
-
-  sendCsvToParse() {
     this.contentService.parseCsvSend(this.file).subscribe(
-      (reponse)=>{
+      (reponse) => {
         console.log(reponse);
       },
-      (error)=>{
+      (error) => {
         console.log(error);
       }
     )

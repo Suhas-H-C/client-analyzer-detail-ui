@@ -13,7 +13,7 @@ export class AppServiceService {
     return this.httpClient.get("https://jsonplaceholder.typicode.com/users")
   }
   getEmployeeRecords(): Observable<any> {
-    return this.httpClient.get("http://localhost:8080/csv/read/dependency")
+    return this.httpClient.get("http://localhost:8081/csv/read/dependency")
       .pipe(
         retry(0), // Retries once
         catchError(this.errorHandler) //catches error in custom method
