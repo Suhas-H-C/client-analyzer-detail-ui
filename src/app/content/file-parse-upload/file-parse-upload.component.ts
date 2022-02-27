@@ -89,7 +89,7 @@ export class FileParseUploadComponent implements OnInit {
     };
     const NgxCsv: ngxCsv = new ngxCsv(this.data, "poc", options) //Can give any JSON data
     const someString: string = NgxCsv.getCsv();
-    console.log(someString)
+    console.log(someString) //Retreivs the data in csv in String format
   }
 
   sendCSVFileAndParse(event: any) {
