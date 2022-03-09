@@ -37,7 +37,8 @@ describe('DataGridComponent', () => {
     /**
      * Using defualt created instance
      */
-    expect(component.rowDataDump.length).toHaveSize(0);
+    let dataGridComp: DataGridComponent = TestBed.createComponent(DataGridComponent).componentInstance;
+    expect(dataGridComp.rowDataDump.length).toHaveSize(0);
   })
 
 });
