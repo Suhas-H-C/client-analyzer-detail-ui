@@ -60,7 +60,7 @@ export class FeatureDevelopComponent implements OnInit {
     id: '12',
     name: 'A'
   }
-  
+
   /**
    * constructor of the class that loads at start
    */
