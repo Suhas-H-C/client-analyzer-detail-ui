@@ -77,6 +77,10 @@
               "browserTarget": "basic-app:build:development"
             }
           },
+          "options": {
+            "browserTarget": "basic-app:build",
+            "port":8080
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
