@@ -8,4 +8,4 @@ RUN npm run build --prod
 FROM nginx:latest 
 COPY --from=builder /app/dist/ang-dashboard/ /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx","-g","deamon off;"]
+CMD ["nginx","-g","daemon off;"] 
