@@ -18,6 +18,9 @@ import { FeatureDevelopComponent } from './feature-develop/feature-develop.compo
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SampleFormComponent } from './sample-form/sample-form.component';
 import { FileParseUploadComponent } from './file-parse-upload/file-parse-upload.component';
+import { NavigateComponent } from './navigate/navigate.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { FileParseUploadComponent } from './file-parse-upload/file-parse-upload.
     FeatureDevelopComponent,
     PageNotFoundComponent,
     DataProviderComponent,
-    FileParseUploadComponent
+    FileParseUploadComponent,
+    NavigateComponent,
+    AlbumsComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +56,8 @@ import { FileParseUploadComponent } from './file-parse-upload/file-parse-upload.
     FeatureDevelopComponent,
     PageNotFoundComponent,
     DataProviderComponent,
-    FileParseUploadComponent
+    FileParseUploadComponent,
+    NavigateComponent
   ],
   providers: [
     ContentServiceService
