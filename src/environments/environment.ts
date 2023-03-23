@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  userPlaceHolderUrl : 'https://jsonplaceholder.typicode.com/users',
+  albumPlaceHolderUrl: 'https://jsonplaceholder.typicode.com/albums',
+  localCsvRead: 'http://localhost:8081/csv/read/dependency',
+  localCsvUpload: 'http://localhost:8080/api/v1/csv/upload'
 };
 
 /*

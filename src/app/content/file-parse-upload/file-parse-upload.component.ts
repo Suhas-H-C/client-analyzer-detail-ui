@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import * as XLSX from 'xlsx';
 import { ngxCsv } from 'ngx-csv/ngx-csv';
+import * as XLSX from 'xlsx';
 import { ContentServiceService } from '../content-service/content-service.service';
-import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-file-parse-upload',
@@ -13,22 +12,22 @@ export class FileParseUploadComponent implements OnInit {
 
   data!: [][];
   file!: File;
-  sampleJson:any = [
+  sampleJson: any = [
     {
-      id:12,
-      name:'A'
+      id: 12,
+      name: 'A'
     },
     {
-      id:13,
-      name:'B'
+      id: 13,
+      name: 'B'
     },
     {
-      id:14,
-      name:'C'
+      id: 14,
+      name: 'C'
     },
     {
-      id:14,
-      name:'D'
+      id: 14,
+      name: 'D'
     },
   ]
   isExcelFileAttached: boolean = true;
