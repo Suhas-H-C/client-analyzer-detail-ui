@@ -1,15 +1,11 @@
-<div class="container-fluid mt-3">
+<!-- <div class="container-fluid mt-3">
     <p>{{ title }} {{ receiveMessage | json }}</p>
     <app-file-parse-upload></app-file-parse-upload>
     <app-accordion-basics (changeTitle)="title = $event"></app-accordion-basics>
     <app-data-provider></app-data-provider>
-    <!-- using EventEmiiter in child component to emit the value to parent component -->
     <app-feature-develop (simpleMessage)="receiveMessage = $event" [giveMeTitle]="yourReferenceTitle"></app-feature-develop>
-</div>
+</div> -->
 
-<div>
-    <!--
-        Place for routes to be displayed - tag can be used in parent module only
-    -->
-    <router-outlet></router-outlet>
-</div>
+
+<app-navigate></app-navigate>
+<router-outlet></router-outlet>

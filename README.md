@@ -47,6 +47,7 @@ UI project built with angular and typescript with a component and module based a
 ## Badges
 Node
 Angular
+BootStrap
 TypeScript
 HTML5
 CSS3
